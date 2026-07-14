@@ -1,20 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CiBookmarkCheck, CiLogout } from "react-icons/ci";
+import { CiLogout } from "react-icons/ci";
 import { SidebarItem } from "./SidebarItem";
 
 export const Sidebar = () => {
     return (
-        <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+        <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
             <div>
                 <div className="-mx-6 px-6 py-4">
-                    <Link href="/dashboard" title="home">
+                    <Link href="/dashboard" className="flex items-center gap-2" title="home">
                         <Image
                             src="assets/todoist.svg"
                             width={50}
                             height={50}
                             alt="logo"
                         />
+                        <span className="text-4xl text-black font-bold">TODOs</span>
                     </Link>
                 </div>
 
@@ -31,8 +32,6 @@ export const Sidebar = () => {
                 </div>
 
                 <ul className="space-y-2 tracking-wide mt-8">
-                    {/* TODO: src/components <SidebarItem /> */}
-                    {/* Active className: text-white bg-gradient-to-r from-sky-600 to-cyan-400 */}
                     <SidebarItem />
                     <SidebarItem />
                     <SidebarItem />

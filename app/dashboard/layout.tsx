@@ -1,5 +1,3 @@
-// Admin Dashboard https://tailwindcomponents.com/component/dashboard-12
-import { CiBellOn, CiChat1, CiMenuBurger, CiSearch } from 'react-icons/ci';
 import { Sidebar } from '../components/Sidebar';
 import { TopMenu } from '../components/TopMenu';
 
@@ -12,7 +10,7 @@ export default function DashboardLayout({
     <>
       <Sidebar />
 
-      <div className="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] min-h-screen">
+      <div className="transition-all duration-300 lg:ml-[25%] lg:peer-checked:ml-0 xl:ml-[20%] 2xl:ml-[15%]">
         <TopMenu />
 
         <div className="px-6 pt-6">
