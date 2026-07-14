@@ -2,6 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 import { CiLogout } from "react-icons/ci";
 import { SidebarItem } from "./SidebarItem";
+import { IoCalendarOutline, IoCheckboxOutline, IoListOutline } from "react-icons/io5";
+
+const menuItems = [
+    {
+        icon: <IoCalendarOutline />,
+        title: 'Dashboard',
+        path: '/dashboard'
+    },
+    {
+        icon: <IoCheckboxOutline />,
+        title: 'Rest TODOS',
+        path: '/dashboard/rest-todos'
+    },
+    {
+        icon: <IoListOutline />,
+        title: 'Server Actions',
+        path: '/dashboard/server-todos'
+    },
+]
 
 export const Sidebar = () => {
     return (
@@ -10,7 +29,7 @@ export const Sidebar = () => {
                 <div className="-mx-6 px-6 py-4">
                     <Link href="/dashboard" className="flex items-center gap-2" title="home">
                         <Image
-                            src="assets/todoist.svg"
+                            src="/assets/todoist.svg"
                             width={50}
                             height={50}
                             alt="logo"
@@ -32,10 +51,11 @@ export const Sidebar = () => {
                 </div>
 
                 <ul className="space-y-2 tracking-wide mt-8">
-                    <SidebarItem />
-                    <SidebarItem />
-                    <SidebarItem />
-                    <SidebarItem />
+                    {
+                        menuItems.map( item => 
+                            <SidebarItem key={item.path} {...item}/>
+                        )
+                    }
                 </ul>
             </div>
 
