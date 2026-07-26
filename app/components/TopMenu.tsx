@@ -25,13 +25,13 @@ export const TopMenu = () => {
                 </div>
                 <div className="flex gap-2">
                     <button className="cursor-pointer flex items-center justify-center w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200 lg:hidden">
-                        <CiSearch size={25} />
+                        <CiSearch className="text-black" size={25} />
                     </button>
                     <button className="cursor-pointer flex items-center justify-center w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
-                        <CiChat1 size={25} />
+                        <CiChat1 className="text-black" size={25} />
                     </button>
                     <button className="cursor-pointer flex items-center justify-center w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
-                        <CiBellOn size={25} />
+                        <CiBellOn className="text-black" size={25} />
                     </button>
                 </div>
             </div>
